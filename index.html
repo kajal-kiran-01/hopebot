@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HopeBot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Nunito+Sans:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="/Website/img/HopeBot_Logo-3.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" >
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <h1>HopeBot</h1>
+            <button id="newChatBtn" class="new-chat-btn">
+                <i class="fas fa-plus"></i> New Chat
+            </button>
+            <div class="chat-history" role="list">
+                </div>
+            <div class="sidebar-footer">
+                <button id="darkModeToggle" class="icon-btn" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="settingsBtn" class="icon-btn" aria-label="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <button id="clearHistoryBtn" class="icon-btn" aria-label="Clear Chat History">
+                    <i class="fas fa-trash"></i>
+                </button>
+                <button id="logoutBtn" class="icon-btn" aria-label="Logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+                <p class="footer-text">&copy; 2025 HopeBot.</p>
+            </div>
+        </aside>
+        <main class="chat-container">
+            <div class="chat-header">
+                <h2>Current Chat</h2>
+            </div>
+            <div id="chatMessages" class="chat-messages" aria-live="polite">
+                <div id="emptyChatPlaceholder" class="empty-chat-placeholder">
+                    <i class="far fa-comment-dots placeholder-icon"></i>
+                    <p class="placeholder-text">Start a new chat or select an existing one from the history to begin.</p>
+                </div>
+                </div>
+            <div class="chat-input">
+                <form id="chatForm">
+                    <input type="text" id="userInput" placeholder="Type your message..." autocomplete="off">
+                    <button type="submit" class="send-btn">Send</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script src="/LoginPage/js/login.js"></script>
+    <script>
+        document.getElementById('logoutBtn').addEventListener('click', handleLogout);
+    </script>
+</body>
+</html>
